@@ -1,0 +1,10 @@
+server:
+  port: 8113
+spring:
+  application:
+    name: user-demo-query
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8110/eureka/

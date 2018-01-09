@@ -1,0 +1,10 @@
+server:
+  port: 8112
+spring:
+  application:
+    name: user-demo-cmd
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8110/eureka/

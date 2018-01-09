@@ -1,0 +1,27 @@
+server:
+  port: 8111
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8110/eureka/
+
+zuul:
+  routes:
+    users-cmd:
+      path: /users/**
+      serviceId: user-demo-cmd
+      methods:
+        - POST
+        - PUT
+      stripPrefix: true
+    users-query:
+      path: /users/**
+      serviceId: user-demo-query
+      methods:
+        - GET
+      stripPrefix: true
+
+spring:
+ application:
+   name: zuul
